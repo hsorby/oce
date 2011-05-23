@@ -712,6 +712,7 @@ ENDMACRO(PROCESS_OCC_MODULE modulename modules)
 # Process modules of each ToolKit                                                  #
 ####################################################################################
 SET(PROCESSED_TOOLKITS)
+SET(INSTALL_PUBLIC_HEADER_FILES)
 FILE(GLOB ALL_PUBLIC_HEADER_FILES ${${PROJECT_NAME}_SOURCE_DIR}/inc/*.*)
 
 # Foundation
@@ -780,8 +781,7 @@ ENDIF(${PROJECT_NAME}_DRAW)
 INSTALL(FILES ${ENV_SCRIPTS}
 	DESTINATION ${${PROJECT_NAME}_INSTALL_SCRIPT_DIR})
 
-FILE(GLOB header_files ${${PROJECT_NAME}_SOURCE_DIR}/inc/*.*)
-INSTALL(FILES ${header_files}
+INSTALL(FILES ${INSTALL_PUBLIC_HEADER_FILES}
 	DESTINATION ${${PROJECT_NAME}_INSTALL_INCLUDE_DIR} COMPONENT Development)
 
 IF(${PROJECT_NAME}_DRAW)
