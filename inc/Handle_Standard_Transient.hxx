@@ -140,37 +140,37 @@ public:
   }
 
   //! Check for equality
-  int operator==(const Handle(Standard_Transient)& right) const
+  bool operator==(const Handle(Standard_Transient)& right) const
   {
     return entity == right.entity;
   }
 
   //! Check for equality
-  int operator==(const Standard_Transient *right) const
+  bool operator==(const Standard_Transient *right) const
   {
     return entity == right;
   }
 
   //! Check for equality
-  friend int operator==(const Standard_Transient *left, const Handle(Standard_Transient)& right)
+  friend bool operator==(const Standard_Transient *left, const Handle(Standard_Transient)& right)
   {
     return left == right.entity;
   }
 
   //! Check for inequality
-  int operator!=(const Handle(Standard_Transient)& right) const
+  bool operator!=(const Handle(Standard_Transient)& right) const
   {
     return entity != right.entity;
   }
 
   //! Check for inequality
-  int operator!=(const Standard_Transient *right) const
+  bool operator!=(const Standard_Transient *right) const
   {
     return entity != right;
   }
 
   //! Check for inequality
-  friend int operator!=(const Standard_Transient *left, const Handle(Standard_Transient)& right)
+  friend bool operator!=(const Standard_Transient *left, const Handle(Standard_Transient)& right)
   {
     return left != right.entity;
   }

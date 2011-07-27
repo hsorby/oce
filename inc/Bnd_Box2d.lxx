@@ -135,7 +135,7 @@ inline void Bnd_Box2d::OpenYmax ()
 //=======================================================================
 
 inline Standard_Boolean Bnd_Box2d::IsOpenXmin () const
-{ return Flags & XminMask; }
+{ return (Flags & XminMask) != 0; }
 
 //=======================================================================
 //function : IsOpenXmax
@@ -143,7 +143,7 @@ inline Standard_Boolean Bnd_Box2d::IsOpenXmin () const
 //=======================================================================
 
 inline Standard_Boolean Bnd_Box2d::IsOpenXmax () const
-{ return Flags & XmaxMask; }
+{ return (Flags & XmaxMask) != 0; }
 
 //=======================================================================
 //function : IsOpenYmin
@@ -151,7 +151,7 @@ inline Standard_Boolean Bnd_Box2d::IsOpenXmax () const
 //=======================================================================
 
 inline Standard_Boolean Bnd_Box2d::IsOpenYmin () const
-{ return Flags & YminMask; }
+{ return (Flags & YminMask) != 0; }
 
 //=======================================================================
 //function : IsOpenYmax
@@ -159,7 +159,7 @@ inline Standard_Boolean Bnd_Box2d::IsOpenYmin () const
 //=======================================================================
 
 inline Standard_Boolean Bnd_Box2d::IsOpenYmax () const
-{ return Flags & YmaxMask; }
+{ return (Flags & YmaxMask) != 0; }
 
 //=======================================================================
 //function : IsWhole
@@ -175,7 +175,7 @@ inline Standard_Boolean Bnd_Box2d::IsWhole () const
 //=======================================================================
 
 inline Standard_Boolean Bnd_Box2d::IsVoid () const
-{ return Flags & VoidMask; }
+{ return (Flags & VoidMask) != 0; }
 
 //=======================================================================
 //function : Add

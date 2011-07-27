@@ -15,13 +15,13 @@
 #define WholeMask 0x7e
 
 // Standard_True if the flag is one
-#define VoidFlag()  ( Flags & VoidMask )
-#define XminFlag()  ( Flags & XminMask )
-#define XmaxFlag()  ( Flags & XmaxMask )
-#define YminFlag()  ( Flags & YminMask )
-#define YmaxFlag()  ( Flags & YmaxMask )
-#define ZminFlag()  ( Flags & ZminMask )
-#define ZmaxFlag()  ( Flags & ZmaxMask )
+#define VoidFlag()  ( (Flags & VoidMask) != 0 )
+#define XminFlag()  ( (Flags & XminMask) != 0 )
+#define XmaxFlag()  ( (Flags & XmaxMask) != 0 )
+#define YminFlag()  ( (Flags & YminMask) != 0 )
+#define YmaxFlag()  ( (Flags & YmaxMask) != 0 )
+#define ZminFlag()  ( (Flags & ZminMask) != 0 )
+#define ZmaxFlag()  ( (Flags & ZmaxMask) != 0 )
 #define WholeFlag() ( (Flags & WholeMask) == WholeMask )
 
 // set the flag to one
