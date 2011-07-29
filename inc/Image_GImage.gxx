@@ -804,8 +804,8 @@ void Image_GImage::DrawLine(const anyPixel& aPixel ,
   Standard_Integer i, tmp ;
   Standard_Real m ;
   Standard_Boolean SwapXY 	= 0 ;
-  Standard_Boolean XAxisMirror 	= 0 ;
-  Standard_Boolean YAxisMirror 	= 0 ;
+  Standard_Integer XAxisMirror 	= 0 ;
+  Standard_Integer YAxisMirror 	= 0 ;
   // From : "Computer Graphics , Principles and Practice, Foley & Van Dam"
 
   //Clip

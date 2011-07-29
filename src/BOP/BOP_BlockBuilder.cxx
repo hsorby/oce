@@ -54,7 +54,8 @@
   myBlocks.Clear();
   myBlocksIsRegular.Clear();
   //
-  Standard_Boolean IsRegular, CurNei, Mextent, Eindex,
+  Standard_Integer Eindex;
+  Standard_Boolean IsRegular, CurNei, Mextent,
                    EnewinM, searchneighbours, condregu;
   Standard_Integer iiregu;
   //
